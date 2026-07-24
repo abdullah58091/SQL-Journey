@@ -62,3 +62,53 @@ mysql> EXPLAIN
 1 row in set, 1 warning (0.00 sec)
 
 mysql>
+mysql> help content ;
+
+Nothing found
+Please try to run 'help contents' for a list of all accessible topics
+
+mysql> CREATE DATABASE company;
+ERROR 1007 (HY000): Can not  create database 'company'; database exists
+mysql> SHOW DATABASES ;
++--------------------+
+| Database           |
++--------------------+
+| college            |
+| company            |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.02 sec)
+
+mysql> USE COMPANY ;
+Database changed
+mysql> CREATE TABLE meeting (
+    ->     meeting_id INT PRIMARY KEY,
+    ->     meeting_name VARCHAR(100),
+    ->     meeting_date DATE,
+    ->     meeting_time TIME,
+    ->     location VARCHAR(100)
+    -> );
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> SELECT * FROM meeting ;
+Empty set (0.05 sec)
+
+mysql> INSERT INTO meeting
+    -> VALUES(101,'Abdullah',12.6.2028,12:00);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.2028,12:00)' at line 2
+mysql> INSERT INTO meeting
+    -> VALUES (101, 'Abdullah', '2028-06-12', '12:00:00', 'Delhi');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> SELECT * FROM meeting ;
++------------+--------------+--------------+--------------+----------+
+| meeting_id | meeting_name | meeting_date | meeting_time | location |
++------------+--------------+--------------+--------------+----------+
+|        101 | Abdullah     | 2028-06-12   | 12:00:00     | Delhi    |
++------------+--------------+--------------+--------------+----------+
+1 row in set (0.00 sec)
+
+mysql>
