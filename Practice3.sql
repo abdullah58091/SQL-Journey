@@ -195,4 +195,36 @@ mysql> SELECT * FROM company.employees;
 +----+----------+------+--------+------------+---------+------------+
 10 rows in set (0.01 sec)
 
+
+mysql> SELECT * FROM college.employees;
++----+-----------+------------+
+| id | name      | manager_id |
++----+-----------+------------+
+|  1 | CEO       |       NULL |
+|  2 | Manager A |          1 |
+|  3 | Manager B |          1 |
+|  4 | Developer |          2 |
+|  5 | Tester    |          2 |
+|  6 | Designer  |          3 |
++----+-----------+------------+
+6 rows in set (0.00 sec)
+
+mysql> SELECT * FROM college.students;
++----+----------+------+-------+
+| id | name     | age  | dept  |
++----+----------+------+-------+
+|  1 | Abdullah |   21 | IT    |
+|  2 | Iram     |   18 | IT    |
+|  3 | Arsh     |   25 | IT    |
+|  4 | Ali      |   21 | HR    |
+|  5 | Sara     |   19 | HR    |
+|  6 | Zoya     |   22 | HR    |
+|  7 | pooja    |   34 | Sales |
+|  8 | saif     |   45 | Sales |
+|  9 | Jhon     |   33 | Sales |
+| 10 | Ajaye    |   56 | Sales |
+| 11 | Sadik    |   23 | Sales |
++----+----------+------+-------+
+11 rows in set (0.00 sec)
+
 mysql>
