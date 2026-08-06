@@ -227,4 +227,14 @@ mysql> SELECT * FROM college.students;
 +----+----------+------+-------+
 11 rows in set (0.00 sec)
 
+mysql> SELECT * FROM college.Teachers;
++-------+
+| name  |
++-------+
+| Ali   |
+| Sara  |
+| David |
++-------+
+3 rows in set (0.03 sec)
+
 mysql>
