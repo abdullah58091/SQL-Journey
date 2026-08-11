@@ -47,7 +47,7 @@ FROM marks;
 
 SELECT
 
-name,
+id,
 
 DENSE_RANK()
 
@@ -177,15 +177,14 @@ mysql> WITH AvgAge AS
 +----+-------+------+-------+
 4 rows in set (0.04 sec)
 
-mysql> SELECT
-    ->
-    -> name,
-    ->
-    -> ROW_NUMBER()
-    ->
-    -> OVER(ORDER BY age)
-    ->
-    -> FROM students;
+ SELECT
+name,
+    
+ ROW_NUMBER()
+    
+     OVER(ORDER BY age)
+
+ FROM students;
 +----------+----------------------------------+
 | name     | ROW_NUMBER()
 
