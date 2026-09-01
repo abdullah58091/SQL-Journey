@@ -472,3 +472,38 @@ mysql>  SELECT
 11 rows in set (0.00 sec)
 
 mysql>
+
+
+mysql> SHOW DATABASES ;
++--------------------+
+| Database           |
++--------------------+
+| college            |
+| company            |
+| information_schema |
+| log_sentinel       |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+7 rows in set (0.13 sec)
+
+mysql> USE log_sentinel;
+Database changed
+mysql> SHOW TABLES;
++------------------------+
+| Tables_in_log_sentinel |
++------------------------+
+| logs                   |
++------------------------+
+1 row in set (0.02 sec)
+
+mysql> SELECT * FROM logs;
++----+-------+----------------------------+-----------------+----------------------------+
+| id | level | message                    | source          | timestamp                  |
++----+-------+----------------------------+-----------------+----------------------------+
+|  5 | ERROR | Database connection failed | Payment-Service | 2026-08-30 15:29:19.150194 |
++----+-------+----------------------------+-----------------+----------------------------+
+1 row in set (0.01 sec)
+
+mysql>
