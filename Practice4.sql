@@ -506,4 +506,35 @@ mysql> SELECT * FROM logs;
 +----+-------+----------------------------+-----------------+----------------------------+
 1 row in set (0.01 sec)
 
+mysql>mysql> USE log_sentinel;
+Database changed
+mysql> SELECT id, username, email, password, role
+    -> FROM users;
++----+-----------+---------------------+--------------------------------------------------------------+------+
+| id | username  | email               | password                                                     | role |
++----+-----------+---------------------+--------------------------------------------------------------+------+
+|  1 | abdullah  | abdullah@gmail.com  | $2a$10$GSpVYkSJWZl7CFPJgHGMU.5t4LAad.1Q7InxxEF4yCns3ZS3jvNs2 | USER |
+|  2 | abdullah2 | abdullah2@gmail.com | $2a$10$4L756uUCDgihC8u2zDF1geBbYAaagF/sHdDQhU6oPIas0wQTlpM0i | USER |
++----+-----------+---------------------+--------------------------------------------------------------+------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT * FROM logs;
++----+-------+----------------------------+-----------------+----------------------------+
+| id | level | message                    | source          | timestamp                  |
++----+-------+----------------------------+-----------------+----------------------------+
+|  5 | ERROR | Database connection failed | Payment-Service | 2026-08-30 15:29:19.150194 |
++----+-------+----------------------------+-----------------+----------------------------+
+1 row in set (0.01 sec)
+
+mysql> SELECT * FROM tickets;
+Empty set (0.00 sec)
+
+mysql> SELECT * FROM logs;
++----+-------+----------------------------+-----------------+----------------------------+
+| id | level | message                    | source          | timestamp                  |
++----+-------+----------------------------+-----------------+----------------------------+
+|  5 | ERROR | Database connection failed | Payment-Service | 2026-08-30 15:29:19.150194 |
++----+-------+----------------------------+-----------------+----------------------------+
+1 row in set (0.00 sec)
+
 mysql>
