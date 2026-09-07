@@ -538,3 +538,49 @@ mysql> SELECT * FROM logs;
 1 row in set (0.00 sec)
 
 mysql>
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| college            |
+| company            |
+| information_schema |
+| log_sentinel       |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+7 rows in set (0.01 sec)
+
+mysql> USE COLLEGE;
+Database changed
+mysql> SHOW TABLES ;
++-------------------+
+| Tables_in_college |
++-------------------+
+| employees         |
+| marks             |
+| student_view      |
+| students          |
+| subjects          |
+| teachers          |
+| users             |
++-------------------+
+7 rows in set (0.01 sec)
+
+mysql> SELECT FROM employees;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM employees' at line 1
+mysql> SELECT * FROM employees;
++----+-----------+------------+
+| id | name      | manager_id |
++----+-----------+------------+
+|  1 | CEO       |       NULL |
+|  2 | Manager A |          1 |
+|  3 | Manager B |          1 |
+|  4 | Developer |          2 |
+|  5 | Tester    |          2 |
+|  6 | Designer  |          3 |
++----+-----------+------------+
+6 rows in set (0.03 sec)
+
+mysql>
